@@ -24,8 +24,6 @@ export default function Table() {
   const classes = useStyles();
   const personData = useSelector((state: any) => state.ageReducer.persons);
 
-  console.log("useselector data", personData);
-
   return (
     <Grid
       container
@@ -48,14 +46,38 @@ export default function Table() {
               {personData.length > 0
                 ? personData.map((item: any) => {
                     return (
-                      <tr style={{ backgroundColor: item.color.primaryLight }}>
-                        <td style={{ color: item.color.primary }}>
+                      <tr
+                        style={{
+                          backgroundColor: item.color.primaryLight,
+                          filter: "contrast(100%)",
+                          textAlign: "center",
+                        }}
+                      >
+                        <td
+                          style={{
+                            color: item.color.primary,
+                            filter: "brigthness(0.1)",
+                            textAlign: "center",
+                          }}
+                        >
                           {item.name}
                         </td>
-                        <td style={{ color: item.color.primaryDark }}>
+                        <td
+                          style={{
+                            color: item.color.primaryDark,
+                            textAlign: "center",
+                            filter: "brigthness(0.1)",
+                          }}
+                        >
                           {item.age}
                         </td>
-                        <td style={{ color: item.color.label }}>
+                        <td
+                          style={{
+                            color: item.color.label,
+                            textAlign: "center",
+                            filter: "brigthness(0.1)",
+                          }}
+                        >
                           {item.color.label}
                         </td>
                       </tr>
