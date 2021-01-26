@@ -45,8 +45,11 @@ export default function TableData() {
               <TableBody>
                 {personData.map((data: any) => {
                   return (
-                    <TableRow>
-                      <TableCell style={{ color: data.color.label }}>
+                    <TableRow id="res-data">
+                      <TableCell
+                        id="data-name"
+                        style={{ color: data.color.label }}
+                      >
                         {data.name}
                       </TableCell>
                       <TableCell style={{ color: data.color.primaryDark }}>
