@@ -60,7 +60,7 @@ function PostAge(props: any) {
       direction="column"
       style={{ minHeight: "80vh" }}
     >
-      <Grid item>
+      <Grid item style={{ width: "30%" }}>
         <TextField
           fullWidth
           id="input-name"
@@ -93,6 +93,7 @@ function PostAge(props: any) {
           variant="contained"
           color="primary"
           onClick={getAge}
+          style={{ marginTop: "8px" }}
         >
           Get Age
         </Button>

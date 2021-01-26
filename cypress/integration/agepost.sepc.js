@@ -13,6 +13,7 @@ describe("Age Finder", () => {
   it("Get Age", () => {
     //input date: #input-date
     //input name: #input-name
+
     cy.get("#input-date").type("1998-11-11");
   });
 });
