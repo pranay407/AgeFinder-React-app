@@ -41,11 +41,6 @@ function PostAge(props: any) {
     } else if (a.getFullYear() > new Date().getFullYear()) {
       setError("*You cannot select future year");
       alert("invalid");
-    } else if (
-      a.getDate() > new Date().getDate() ||
-      a.getMonth() > new Date().getMonth()
-    ) {
-      setError("*You cannot select future date");
     } else if (inputDOB === "") {
       setError("*Please enter date");
     } else {
@@ -91,7 +86,7 @@ function PostAge(props: any) {
           }}
           style={{ marginBottom: "1.5rem" }}
         />
-        <span style={{ color: "red" }}>{error}</span>
+        <span style={{ color: "red", display: "inline-block" }}>{error}</span>
         <Button
           id="btn-post"
           fullWidth

@@ -2,7 +2,7 @@ import { Grid } from "@material-ui/core";
 import "./App.css";
 import Nav from "./components/Nav";
 import PostAge from "./components/PostAge";
-import Table from "./components/Table";
+import TableData from "./components/TableData";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <PostAge />
       </Grid>
       <Grid item>
-        <Table />
+        <TableData />
       </Grid>
     </Grid>
   );
